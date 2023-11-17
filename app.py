@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, jsonify
 import os
 import shutil
 from detectron2.engine import DefaultPredictor
@@ -44,13 +44,15 @@ def upload_image():
         if os.path.exists(temp_results_path):
             shutil.rmtree(temp_results_path)
 
-        # Save the uploaded image to the input directory
+        # 업로드된 이미지를 input 디렉토리에 저장
         input_image_path = os.path.join(input_dataset_directory, "uploaded_image.jpg")
         image.save(input_image_path)
 
-        # Process the image
+        # 이미지 처리 작업 진행
         processed_image_path = process_image(input_image_path)
-        return render_template('home.html', processed_image_path=processed_image_path)
+        """ return render_template('home.html', processed_image_path=processed_image_path) """
+        return jsonify({"status": "success", "message": "이미지가 성공적으로 업로드되었습니다.", "processed_image_path": processed_image_path})
+
     
 @app.route('/download', methods=['GET'])
 def download_image():
@@ -70,7 +72,7 @@ def process_image(input_image_path):
     cfg.DATASETS.TEST = ("my_dataset",)
     predictor = DefaultPredictor(cfg)
 
-    # Process the image using your defined functions
+    # 이미지 처리 작업 진행
     image_segmentation(predictor, input_dataset_directory, output_directory) #여기서 input_image_path가 아닌 그 이미지가 속한 폴더를 넣어줘야함. 함수에 predictor를 인자로 넣어줌.
     make_contour_transparent(root_folder)
     connect_lines(root_folder)

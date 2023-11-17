@@ -596,18 +596,17 @@
                   <div class="fs-hero__block fs-hero__block--headline">
                       <!-- <div data-v-c980af24 class="fs-hero__column fs-hero__column--texts"> -->
                         <div class="center-text">
-                          <h1  class="marketing-header1">Pawsitive Transformations</h1>
-                          <h2  class="marketing-text--medium">클릭 한번으로 유기견 사진의 배경을 변환하여 강아지를 구해주세요!</h2>
+                          <h1  class="marketing-header1">Pawsitive Transformations </h1>
+                          <h2  class="marketing-text--medium">클릭 한번으로 유기견 사진의 배경을 변환하여 강아지를 구해주세요!<br><br><br></h2>
                         </div>
                   </div>
-                  <div  class="fs-hero__block fs-hero__block--images"><img data-v-c980af24="" src="/static/images/0000.png" alt="Face Swapper Examples" class="desktop"><img data-v-c980af24="" src="0000.png" alt="Face Swapper Examples" class="mobile"></div>
+                  <div  class="fs-hero__block fs-hero__block--images"><img data-v-c980af24="" src="/static/images/0000.png" alt="Face Swapper Examples" style="display:block;margin:0 auto;width:50%;height:50%" class="desktop"><img data-v-c980af24="" src="0000.png" alt="Face Swapper Examples" class="mobile"></div>
                   <div data-v-5e7269cf="" class="fs-cases container">
-                    <div data-v-5e7269cf="" class="fs-cases__title product-header1">매년 10만 마리 이상의 유기동물 발생</div><div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">그 중 약 20%의 유기동물들이 안락사를 당합니다.</div>
+                    <div data-v-5e7269cf="" class="fs-cases__title product-header1"><br><br>매년 8만 마리 이상의 유기견 발생</div><div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">&nbsp&nbsp그러나 그들 중 약 30%만이 입양의 기회를 얻습니다.</div><br><br>
                     <div  class="fs-hero__block fs-hero__block--images"><img data-v-c980af24="" src="/static/images/0.png" alt="Face Swapper Examples" class="desktop"><img data-v-c980af24="" src="0.png" alt="Face Swapper Examples" class="mobile"></div>
-                    <div data-v-5e7269cf="" class="fs-cases__title product-header1">유기동물보호소 포화상태</div><div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">너무 많은 유기동물로 인해 보호소에서는 관리가 힘듭니다.</div>
+                    <div data-v-5e7269cf="" class="fs-cases__title product-header1"><br><br>유기견 게시 공고가 올라온 후 단 10일</div><div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">&nbsp&nbsp안락사 대기상태에 놓이기 10일 전, 유기견은 자신을 최대한 어필해야 합니다.<br><br>&nbsp&nbsp그러나 이미 포화상태인 유기견 보호소는 유기견 공고에 노력을 쏟을 여력이 없습니다.</div>
                     <div  class="fs-hero__block fs-hero__block--images"><img data-v-c980af24="" src="/static/images/00.png" alt="Face Swapper Examples" class="desktop"><img data-v-c980af24="" src="00.png" alt="Face Swapper Examples" class="mobile"></div>
-                    <div data-v-5e7269cf="" class="fs-cases__title product-header1">사진으로 입양률 높이기</div><div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">예쁘게 사진 찍기 힘든환경,</div>
-                    <div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">클릭 한 번으로 배경을 바꿔서 더 많은 동물을 구해주세요!</div>
+                    <div data-v-5e7269cf="" class="fs-cases__title product-header1"><br><br>입양을 위한 작지만 강력한 노력 </div><div data-v-5e7269cf="" class="fs-cases__subtitle product-header2">&nbsp&nbsp예쁘게 사진 찍기 힘든환경이더라도,<br><br>&nbsp&nbspPAWSITIVE TRANSFORMATIONS로 공고 사진을 바꿔 더 많은 유기견을 구해주세요!</div>
                     <div  class="fs-hero__block fs-hero__block--images"><img data-v-c980af24="" src="/static/images/000.png" alt="Face Swapper Examples" class="desktop"><img data-v-c980af24="" src="000.png" alt="Face Swapper Examples" class="mobile"></div>
                 </div>
                   <div data-v-c980af24="" class="fs-hero__block fs-hero__block--images">
@@ -627,17 +626,23 @@
                                   <input type="submit" value="업로드" style="display: none;">
                               </form>
                               <div data-v-157fc7ae class="fs-dropzone__requirements">
-                                <div data-v-157fc7ae class="product-text--small normal">JPG, PNG, WEBP
+                                <div data-v-157fc7ae class="product-text--small normal">JPG
                                 </div>
                             </div>
                                 </div>
                             </div>
                             <div class="middle-center">
                               <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
-                                <button type="button" button data-v-a5f31c36 class="button primary large" id="change-button"> 변경하기</button>
+                                <button type="button" button data-v-a5f31c36 class="button primary large" id="change-button"> 확인하기</button>
                                 <input type="submit" value="업로드" style="display: none;">
                               </form>
                               <img data-v-c980af24 src="https://cdn-icons-png.flaticon.com/512/4705/4705745.png" alt="Face Swapper Examples" class="desktop" width="200" height="200">
+                              <!-- 여기서부터 박스 생성 -->
+                              <div id="changed-image-box" style="border: 1px solid #000; padding: 10px; text-align: center;">
+                                <p id="changed-image-message" style="margin: 0;"></p>
+                                <img src="" id="changed-image" alt="Changed Image" style="display: none;">
+                              </div>
+                              <!-- 여기까지 -->
                             </div>
                             <div class="right-box">
                               <div data-v-157fc7ae class="fs-dropzone__wrapper">
@@ -656,21 +661,22 @@
                                   <input type="submit" value="업로드" style="display: none;">
                               </form>
                               <div data-v-157fc7ae class="fs-dropzone__requirements">
-                                <div data-v-157fc7ae class="product-text--small normal">JPG, PNG, WEBP
+                                <div data-v-157fc7ae class="product-text--small normal">JPG
                                 </div>
                             </div>
                                 </div>
                             </div>
                             </div>
                           </div>
-                            
-                            
                           </div>
                         </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+            <br><br><br><br><br><br>
+        <div style="text-align:center;"> 경희대학교 김지혁 엄현지 오민준<br><br></div>
         </section>
     
         <form action="/upload" method="post" enctype="multipart/form-data">
@@ -684,6 +690,11 @@
   
         <!-- 결과 이미지 표시 -->
         <img id="result-image" src="" style="display: none;">
+
+        <!-- 변경 완료 메시지 표시할 박스 -->
+        <div id="status-box" style="display: block;">
+          <p id="status-message"></p>
+        </div>
   
 
         <script>
@@ -715,6 +726,17 @@
             fetch('/upload', {
                 method: 'POST',
                 body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 서버에서 받은 응답 처리
+                if (data.status === 'success') {
+                    // 변경 완료 메시지를 화면에 표시
+                    document.getElementById('changed-image-message').innerText = '배경이 변환되었습니다.';
+                    document.getElementById('changed-image-box').style.display = 'block';
+                } else {
+                    console.error('Error:', data.message);
+                }
             })
             .catch(error => console.error('Error:', error));
         });
@@ -784,7 +806,6 @@
             })
             .catch(error => console.error('Error:', error));
         });
-
 
 
 

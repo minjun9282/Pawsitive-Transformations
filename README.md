@@ -12,7 +12,7 @@
 
 ## 프로젝트 구조<br>
 
-'''
+```
 ├── local_datas
 │   ├── model_final.pth
 │   ├── combined.json
@@ -35,6 +35,6 @@
 │   └── home.html
 ├── static/images
 └── app.py
-'''
+```
 
 <br><br>

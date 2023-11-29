@@ -2,7 +2,7 @@ import os
 import cv2
 import json
 
-# 이미지의 구도 파악하기 1 - background 및 ground의 어핀 변환에 활용
+# 이미지의 구도 파악하기 1 - 원근 변환에 활용할 수 있도록 background와 ground의 마스킹 영역 조정
 def connect_lines(root_folder):# background.jpg와 ground.jpg의 contour lines의 교차점을 노란색 직선으로 이어 background와 ground의 구도 파악
     for root, dirs, _ in os.walk(os.path.join(root_folder, "segmented_images")):
         for dir_name in dirs:
